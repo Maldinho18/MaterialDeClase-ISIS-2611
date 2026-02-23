@@ -1,4 +1,5 @@
-# Laboratorio 1 - Exploración, preparación y regresión lineal 
+# Laboratorio 2 - Complejidad y búsqueda de hiperparámetros
+
 
 [Caso](#contexto)
 
