@@ -1,0 +1,3 @@
+Modelo;Variables;Estrategia Prep.;RMSE;MAE;R²
+Modelo 1 - Baseline;11 numéricas;SimpleImputer + StandardScaler;10.765520603804363;3.683505069501617;0.004375530277453854
+Modelo 2 - Alternativas;11 numéricas + 6 categóricas;SimpleImputer + MinMaxScaler + OneHotEncoder;10.640714932109951;3.707345838255527;0.02732645088128649
