@@ -1,0 +1,156 @@
+Instrucciones de Proyecto (Competencia)
+Curso Aprendizaje de M´ aquina 2026-10
+1 Introducci´ on
+Bienvenidos al proyecto del curso. El presente proyecto consiste en una competencia acad´ emica en la
+que participar´ an grupos de todas las secciones. El desaf´ ıo propuesto consiste en desarrollar un sistema
+de clasificaci´ on de textos seg´ un su d´ ecada de origen. El objetivo principal es dise˜ nar un modelo capaz
+de predecir la d´ ecada en la que fue escrito un p´ arrafo determinado.
+La competencia se divide en dos etapas. En la primera, los participantes deber´ an emplear t´ ecnicas
+tradicionales de aprendizaje autom´ atico, sin recurrir al uso de redes neuronales ni arquitecturas profun-
+das. En la segunda etapa, ser´ a obligatorio utilizar redes neuronales profundas, as´ ı como implementar
+estrategias de aumento de datos.
+La competencia es exclusiva para estudiantes del Curso de Aprendizaje de M´ aquina de la Universidad
+de los Andes inscritos en el primer semestre del 2026-10.
+2 Resultados de Aprendizaje
+Con esta actividad se busca que el estudiante pueda poner en pr´ actica el desarrollo de una soluci´ on
+completa demachine learningpara un problema de clasificaci´ on de texto. Tras realizar esta actividad
+se espera que el estudiante est´ e en capacidad de:
+1. Proponer y seleccionar modelos demachine learningque permitan resolver un problema de clasi-
+ficaci´ on de texto.
+2. Identificar y aplicar diferentes t´ ecnicas de procesamiento de texto.
+3. Representar el texto de manera que permita el uso de modelos demachine learning.
+4. Hacer uso de los datos para entrenar y evaluar el desempe˜ no del modelo.
+5. Probar distintos modelos para encontrar la mejor soluci´ on para el problema particular.
+1
+
+3 Descripci´ on de la Competencia
+La competencia consiste en la construcci´ on de un sistema capaz de clasificar textos seg´ un la d´ ecada en
+que fueron escritos. El objetivo principal es desarrollar un modelo que, dado un p´ arrafo como entrada,
+prediga de manera precisa la d´ ecada de origen del texto.
+3.1 Plataforma
+Kaggle es una plataforma en l´ ınea que permite a investigadores, profesionales y estudiantes participar en
+competencias de ciencia de datos y aprendizaje autom´ atico. En Kaggle, los usuarios pueden acceder a
+conjuntos de datos, desarrollar modelos, colaborar con otros participantes y presentar sus soluciones para
+ser evaluadas autom´ aticamente mediante un sistema de puntuaci´ on. Adem´ as, ofrece recursos educativos
+y foros de discusi´ on que facilitan el aprendizaje y la resoluci´ on de problemas. Para la competencia
+del curso se utilizar´ a la plataforma Kaggle. En un documento anexo publicado en Bloque Neon va a
+encontrar un tutorial de registro a la plataforma, registro a una competencia de prueba y la explicaci´ on
+de c´ omo realizar env´ ıos.
+3.2 Descripci´ on de los Datos
+Se proporcionan los siguientes archivos:
+•train.csv: contiene alrededor de 31,400 ejemplos de entrenamiento con columnas:
+–text(str): texto a clasificar.
+–decade(int): d´ ecada del texto expresada como los tres primeros d´ ıgitos del a˜ no (ejemplo:
+para el a˜ no de 1572 la d´ ecada es 157).
+•eval.csv: archivo de evaluaci´ on con columnas:
+–id: identificador ´ unico del ejemplo de prueba.
+–text: texto a clasificar.
+3.3 Archivo de respuesta
+El archivo de respuesta debe contener el siguiente formato:
+id,answer
+2,150
+5,162
+6,173
+...
+Cadaiden el conjunto de prueba debe tener un valor en la columnaanswer, indicando la d´ ecada predicha
+por el modelo.
+Este archivo de respuesta debe ser enviado a trav´ es de la plataforma Kaggle, y ser´ a utilizado para
+la evaluaci´ on de su propuesta, as´ ı como para su clasificaci´ on en el leaderboard de la competencia. Una
+parte de los resultados se emplear´ a para calcular el score p´ ublico, el cual estar´ a disponible durante toda
+la competencia, mientras que otra parte se utilizar´ a para el score privado, que determinar´ a el resultado
+final y ser´ a revelado un d´ ıa despu´ es de la finalizaci´ on de la competencia.
+4 Parte 1: Machine Learning Cl´ asico
+La primera etapa de la competencia se centra en la aplicaci´ on de algoritmos cl´ asicos de aprendizaje
+autom´ atico para la tarea de clasificaci´ on.
+2
+
+4.1 Requisitos t´ ecnicos
+Recuerde que su modelo no tendr´ a validez si no cumple los requisitos que se mencionan a continuaci´ on.
+Por lo tanto, obtendr´ a una calificaci´ on de 0 en la primera entrega. Los requisitos son los siguientes:
+•No se permite el uso de t´ ecnicas de aprendizaje profundo, incluyendo modelos de lenguaje basados
+en arquitecturastransformer.
+• ´Unicamente se pueden emplear modelos de clasificaci´ on desarrollados con la librer´ ıascikit-learn,
+siempre que no contravengan los dem´ as requisitos aqu´ ı establecidos.
+•La competencia debe resolverse exclusivamente mediante el uso de modelos cl´ asicos de aprendizaje
+autom´ atico y t´ ecnicas de representaci´ on de texto abordadas durante la primera parte del curso.
+•Para la revisi´ on en Bloque Ne´ on, se debe subir un ´ unico modelo, el cual debe corresponder al env´ ıo
+que haya obtenido el mejor resultado en la competencia de Kaggle de su grupo.
+•Los resultados deben ser completamente replicables a partir de los entregables presentados en la
+plataforma de Bloque Ne´ on.
+4.2 Entregables en Bloque Ne´ on
+En la semana 11 del curso se habilitar´ a una actividad en la que usted y su grupo deber´ an subir los
+siguientes entregables, correspondientes ´ unicamente al modelo final con el que obtuvieron los mejores
+resultados en la tabla de l´ ıderes p´ ublica de la competencia de Kaggle:
+1. Jupyter Notebook que se utiliz´ o para realizar la implementaci´ on y el entrenamiento del clasificador
+de texto.
+2. El archivo donde se guard´ o el modelo descikit-learnentrenado. El modelo debe guardarse
+haciendo uso de las librer´ ıaspickleojoblib.
+4.3 R´ ubrica de Evaluaci´ on
+La nota del proyecto se compone de los siguientes criterios:
+Table 1: Composici´ on de la nota del proyecto - Parte 1
+Item Porcentaje de la nota
+Participaci´ on en la competencia 20%
+Superar la l´ ınea base (ver en Kaggle) 40%
+Percentil obtenido en la competencia 40%
+4.3.1 Participaci´ on en la competencia
+Para que sea considerada su participaci´ on en la competencia su grupo debe realizar al menos 5 env´ ıos
+diferentesen la plataforma de Kaggle. La idea es evidenciar que el grupo trato de mejorar su enfoque
+inicial.
+4.3.2 Superar la l´ ınea base
+El equipo del curso preparo una linea base (i.e. modelo) que debe superar. Esta linea base la encuentra
+en el leaderboard de la competencia en Kaggle.
+4.3.3 Percentil obtenido en la competencia
+El 40% restante de la nota final se obtiene de acuerdo al desempe˜ no del modelo desarrollado con su
+grupo en la competencia de Kaggle. Al cerrar la competencia se generan unos puntajes finales, y su nota
+en este rubro depender´ a del desempe˜ no obtenido. El porcentaje obtenido de este rubro se calcula de la
+siguiente manera:
+3
+
+Desempe˜ no obtenido Porcentaje del rubro
+<percentil 25 0%
+≥percentil 25 y<percentil 50 50%
+≥percentil 50 y<percentil 75 75%
+>percentil 75 100%
+Table 2: Distribuci´ on del porcentaje del rubro seg´ un desempe˜ no obtenido
+4.3.4 Fechas Importantes Parte 1
+•Fecha de apertura:Semana 4
+•Fecha de finalizaci´ on:Semana 11 (13 de abril 10pm)
+4.4 Enlaces de la Competencia Kaggle Parte 1
+•Enlace de Invitaci´ on: Kaggle Invitation Parte 1
+5 Parte 2: Deep Learning y Aumentaci´ on de Datos
+En esta segunda etapa de la competencia, usted y su grupo deber´ an abordar la tarea de clasificaci´ on uti-
+lizando arquitecturas profundas de aprendizaje autom´ atico. Se permite emplear modelos de aprendizaje
+profundo como MLPs, redes neuronales convolucionales (CNN), recurrentes (RNN), entre otras.
+5.1 Requisitos t´ ecnicos
+Para esta parte, es fundamental cumplir con los siguientes requisitos para que su modelo sea considerado
+v´ alido:
+•Es obligatorio el uso de t´ ecnicas y arquitecturas de aprendizaje profundo, incluyendo transferencia
+de aprendizaje, y modelos preentrenados.
+•Es posible aplicar estrategias de aumentaci´ on de datos, tales como la incorporaci´ on de fuentes de
+datos abiertas disponibles de las ´ epocas correspondientes.
+•Se permite el uso de datos externos siempre que la licencia lo autorice, puedan ser referenciados
+adecuadamente, descargados y distribuidos.
+•En caso de utilizar datos adicionales, estos deben ser referenciados de manera clara, incluyendo la
+p´ agina de donde fueron obtenidos y la licencia expl´ ıcita de uso.
+•Est´ a permitido el uso de datos sint´ eticos para entrenar los modelos, pero debe describir en detalle
+como realizo la construcci´ on.
+•Est´ a estrictamente prohibido utilizar los datos de prueba para el entrenamiento de los modelos.
+5.2 Entregables en Bloque Ne´ on
+En la semana 14 del curso se habilitar´ a una actividad en la que usted y su grupo deber´ an subir los
+siguientes entregables, correspondientes ´ unicamente al modelo final con el que obtuvieron los mejores
+resultados en la tabla de l´ ıderes p´ ublica de la competencia de Kaggle:
+1. Jupyter Notebook utilizado para la implementaci´ on, entrenamiento y evaluaci´ on del modelo de
+aprendizaje profundo.
+2. El archivo con el modelo entrenado, guardado utilizando las librerias vistas en clase (tensorflow,
+keras, etc.).
+3. Un documento adicional que incluya las referencias a los datos externos utilizados, especificando
+la fuente, el enlace y la licencia de cada conjunto de datos.
+4
+
+5.3 R´ ubrica de Evaluaci´ on
+La calificaci´ on de esta parte del proyecto sigue la misma l´ ogica de la pate 1.
+5.3.1 Fechas Importantes Parte 2
+•Fecha de finalizaci´ on:Semana 16
+5.4 Enlaces de la Competencia Kaggle Parte 2
+•Enlace de Invitaci´ on: Ser´ a informada posteriormente
+5

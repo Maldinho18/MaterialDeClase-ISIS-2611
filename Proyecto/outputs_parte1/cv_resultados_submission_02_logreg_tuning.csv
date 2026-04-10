@@ -1,0 +1,5 @@
+experiment,model,cv_accuracy_mean,cv_accuracy_std,elapsed_sec
+submission_02_logreg_tuning,LogReg_C3,0.2599753731048141,0.002939738285795391,1324.2
+submission_02_logreg_tuning,LogReg_C7,0.25940215511952436,0.0030393911328415275,1504.9
+submission_02_logreg_tuning,LogReg_C5,0.2591792708167489,0.003113963145558751,1951.7
+submission_02_logreg_tuning,LogReg_C1,0.25497592577757,0.004330100071135792,990.2
