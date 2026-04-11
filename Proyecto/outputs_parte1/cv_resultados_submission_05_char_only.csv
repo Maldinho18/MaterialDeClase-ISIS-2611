@@ -1,0 +1,3 @@
+experiment,model,cv_accuracy_mean,cv_accuracy_std,elapsed_sec
+submission_05_char_only,LogReg_C3_char_only_36,0.2595615631816509,0.00588172296991457,2421.6
+submission_05_char_only,LinearSVC_1.5_char_only_36,0.2560266378127545,0.0045225507920698,360.9
