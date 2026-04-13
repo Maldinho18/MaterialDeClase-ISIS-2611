@@ -205,3 +205,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Model artifacts (too large for GitHub)
+Proyecto/outputs_parte1/*.joblib
