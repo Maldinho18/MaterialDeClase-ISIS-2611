@@ -1,0 +1,4 @@
+alg,param,silhouette
+KMeans,k=2,0.13327329179354094
+Agglomerative,k=3,0.10631932577128278
+DBSCAN,"k={'eps': 1.0, 'min_samples': 3}",-0.2503528598279681
