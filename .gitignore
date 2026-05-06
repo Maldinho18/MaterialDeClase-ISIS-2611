@@ -208,3 +208,6 @@ __marimo__/
 
 # Model artifacts (too large for GitHub)
 Proyecto/outputs_parte1/*.joblib
+
+# Prevent oversized archive from re-entering history
+Proyecto.zip
