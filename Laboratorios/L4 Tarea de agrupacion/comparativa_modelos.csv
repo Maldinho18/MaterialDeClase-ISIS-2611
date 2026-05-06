@@ -1,4 +1,4 @@
 alg,param,silhouette
-KMeans,n_clusters=2,0.1403743534755156
+KMeans,n_clusters=2,0.14037435347551563
 Agglomerative,n_clusters=3,0.11604088645969214
-DBSCAN,"eps=1.0, min_samples=3",0.5048688514522925
+DBSCAN,"eps=1.0, min_samples=3",0.5048688514522929
